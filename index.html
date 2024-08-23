@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <script src="app.js" defer></script>
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <header>
+        <h1>Encriptador de texto</h1>
+    </header>
+    <main class="contenedor_encriptador">
+        <section class="menu_encriptador">
+            <textarea name="message" id="message_input" cols="30" rows="8" placeholder="Ingrese el texto aquí"
+                required></textarea>
+
+            <div class="menu_encriptador_botones"><span class="info_encriptador_contenedor">
+                    <p id="info_encriptador"> No se aceptan mayúsculas ni caracteres especiales.</p><img
+                        src="assets/icono_info.png" alt="" id="icono_info">
+                </span><button class="contenedor_button_primary encriptar">Encriptar</button><button
+                    class="contenedor_button_secondary desencriptar">Desencriptar</button></div>
+        </section>
+        <section class="pantalla_mensaje">
+            <div class="pantalla_mensaje_resultado">
+                <p class="parrafo_resultado"><span class="texto_negritas">Ningún mensaje fue encontrado</span>
+                    <br>Ingresa el texto que desees
+                    encriptar o desencriptar
+                </p>
+            </div>
+
+            <div class="pantalla_mensaje_botones"><button class="pantalla_button_primary copiar"
+                    disabled>Copiar</button>
+                <button class="pantalla_button_secondary limpiar_texto">Limpiar texto</button>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Encriptador de Texto (Alura Latam Challenge) 2024 - By <a href="https://regina-cht.github.io/portafolio/"
+                target="_blank"> Regina
+                Chavarín</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+:root {
+  --color-white: #ffffff;
+
+  --color-light: #e2dce8;
+  --color-dark: #121527;
+  --color-primary: #00174e;
+  --color-secondary: #504ca9;
+  --color-info: #a298ed;
+
+  --color-accent1: #522eb9;
+  --color-accent2: #9d54ff;
+  --color-accent3: #b788f2;
+  --color-accent4: #4a4f66;
+
+  --color-success: #009e5b;
+  --color-disabled: #a5a5a5;
+  --color-danger: #ef1900;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background: linear-gradient(263deg, #5c35c7, #27075a);
+  background-size: 400% 400%;
+
+  -webkit-animation: background_gradient 30s ease infinite;
+  -moz-animation: background_gradient 30s ease infinite;
+  animation: background_gradient 30s ease infinite;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  top: 0;
+  padding: 0 16%;
+}
+h1 {
+  color: var(--color-white);
+  font-size: 1.6rem;
+}
+.contenedor_encriptador {
+  width: 70%;
+  display: flex;
+  gap: 30px;
+}
+button:disabled,
+button:hover:disabled {
+  background-color: var(--color-disabled);
+}
+
+.menu_encriptador,
+.pantalla_mensaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 10px;
+}
+.menu_encriptador {
+  background-color: var(--color-dark);
+}
+.pantalla_mensaje {
+  background-color: var(--color-white);
+}
+.pantalla_mensaje_resultado {
+  height: 200px;
+  width: 90%;
+}
+.texto_negritas {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.parrafo_resultado {
+  font-size: 1.2rem;
+}
+
+#message_input {
+  width: 90%;
+  height: 200px;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  outline: none;
+}
+
+::placeholder {
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+#info_encriptador {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #4a4f66bb;
+  color: var(--color-white);
+  width: 150px;
+}
+.info_encriptador_contenedor:hover #info_encriptador {
+  visibility: visible;
+}
+
+.menu_encriptador_botones,
+.pantalla_mensaje_botones {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contenedor_button_primary,
+.contenedor_button_secondary,
+.pantalla_button_primary,
+.pantalla_button_secondary {
+  width: 40%;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  border: none;
+}
+#icono_info {
+  height: 25px;
+}
+.contenedor_button_primary {
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+.contenedor_button_secondary {
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border: 2px solid var(--color-white);
+}
+
+.pantalla_button_primary {
+  color: var(--color-white);
+  background-color: var(--color-accent1);
+}
+
+.pantalla_button_secondary {
+  color: var(--color-accent1);
+  background-color: transparent;
+  border: 2px solid var(--color-accent1);
+}
+
+.contenedor_button_primary:hover,
+.contenedor_button_secondary:hover,
+.pantalla_button_primary:hover,
+.pantalla_button_secondary:hover {
+  color: var(--color-white);
+  background: var(--color-accent4);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8%;
+  color: var(--color-light);
+  position: fixed;
+  bottom: 0px;
+  padding: 10%;
+}
+footer > p > a {
+  color: var(--color-light);
+}
+
+/* Animación Fondo*/
+
+@-webkit-keyframes background_gradient {
+  0% {
+    background-position: 0% 38%;
+  }
+  50% {
+    background-position: 100% 63%;
+  }
+  100% {
+    background-position: 0% 38%;
+  }
+}
+@-moz-keyframes background_gradient {
+  0% {
+    background-position: 0% 38%;
+  }
+  50% {
+    background-position: 100% 63%;
+  }
+  100% {
+    background-position: 0% 38%;
+  }
+}
+@keyframes background_gradient {
+  0% {
+    background-position: 0% 38%;
+  }
+  50% {
+    background-position: 100% 63%;
+  }
+  100% {
+    background-position: 0% 38%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .contenedor_encriptador {
+    flex-direction: column;
+  }
+  .texto_negritas {
+    font-size: 1.2rem;
+  }
+  .parrafo_resultado {
+    font-size: 1rem;
+  }
+  #message_input {
+    font-size: 1.2rem;
+  }
+
+  ::placeholder {
+    font-size: 1.2rem;
+  }
+  .contenedor_button_primary,
+  .contenedor_button_secondary,
+  .pantalla_button_primary,
+  .pantalla_button_secondary {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .contenedor_encriptador {
+    flex-direction: column;
+  }
+  .texto_negritas {
+    font-size: 1.1rem;
+  }
+  #message_input {
+    font-size: 1.1rem;
+  }
+
+  ::placeholder {
+    font-size: 1.1rem;
+  }
+  .contenedor_button_primary,
+  .contenedor_button_secondary,
+  .pantalla_button_primary,
+  .pantalla_button_secondary {
+    font-size: 0.7rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 350px) {
+  .contenedor_button_primary,
+  .contenedor_button_secondary,
+  .pantalla_button_primary,
+  .pantalla_button_secondary {
+    font-size: 0.6rem;
+  }
+}
