@@ -66,14 +66,19 @@ function encriptarMensaje(str) {
 }
 
 function desencriptar(str) {
-  let mensajeDesencriptado = str
-    .replace(/xJd/g, 'a')
-    .replace(/yIl/g, 'e')
-    .replace(/Als/g, 'i')
-    .replace(/isz/g, 'o')
-    .replace(/vSf/g, 'u');
-  document.querySelector('.copiar').removeAttribute('disabled');
-  return asignarTextoElemento('.parrafo_resultado', mensajeDesencriptado);
+  let textoUsuario = document.getElementById('message_input').value;
+  if (textoUsuario == '') {
+    cambiarColorTexto('.parrafo_resultado', 'black');
+  } else {
+    let mensajeDesencriptado = str
+      .replace(/xJd/g, 'a')
+      .replace(/yIl/g, 'e')
+      .replace(/Als/g, 'i')
+      .replace(/isz/g, 'o')
+      .replace(/vSf/g, 'u');
+    document.querySelector('.copiar').removeAttribute('disabled');
+    return asignarTextoElemento('.parrafo_resultado', mensajeDesencriptado);
+  }
 }
 
 function copiar() {
